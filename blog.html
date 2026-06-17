@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Stories - Samyak Jain</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .blog-hero {
+            padding: 80px 20px 60px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            border-color: var(--neon);
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background: rgba(0, 217, 255, 0.05);
+        }
+
+        .blog-card-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(0, 217, 255, 0.02) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(0, 217, 255, 0.3);
+        }
+
+        .blog-card-body {
+            padding: 1.5rem;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-card-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .blog-card-tag {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            color: var(--neon);
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .blog-card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .blog-card-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .blog-card-read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--neon);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .coming-soon {
+            text-align: center;
+            padding: 4rem 20px;
+            color: var(--text-muted);
+        }
+
+        .coming-soon .neon {
+            color: var(--neon);
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero h1 { font-size: 2rem; }
+            .blog-grid { grid-template-columns: 1fr; padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display:flex;align-items:center;">
+                    <svg width="52" height="44" viewBox="150 30 380 280" role="img" xmlns="http://www.w3.org/2000/svg">
+                        <title>SJ logo</title>
+                        <path d="M 340 85 C 340 85 260 75 242 115 C 225 150 280 165 310 172 C 342 179 388 195 380 230 C 372 262 300 270 268 258 C 245 248 230 232 230 232" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+                        <line x1="430" y1="90" x2="430" y2="225" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+                        <path d="M 430 225 C 430 275 385 290 358 274" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+                        <line x1="400" y1="90" x2="468" y2="90" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                        <circle cx="230" cy="232" r="6" fill="#00f5d4"/>
+                    </svg>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="blog.html" class="active" style="color: var(--neon);">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="blog-hero">
+        <div class="container">
+            <h1>Travel <span class="neon">Stories</span></h1>
+            <p>Adventures, roads, and places that stayed with me.</p>
+        </div>
+    </div>
+
+    <div class="blog-grid">
+
+        <!-- SAMPLE POST — replace with real content -->
+        <a href="#" class="blog-card">
+            <div class="blog-card-image-placeholder">🏔️</div>
+            <div class="blog-card-body">
+                <div class="blog-card-meta">
+                    <span class="blog-card-date">Coming Soon</span>
+                    <span class="blog-card-tag">Travel</span>
+                </div>
+                <div class="blog-card-title">First story coming soon</div>
+                <div class="blog-card-excerpt">Stay tuned — adventures in the making. Roads, trails, and stories worth telling.</div>
+                <span class="blog-card-read-more">Read more →</span>
+            </div>
+        </a>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Samyak Jain. Built with <span class="neon">❤</span></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
